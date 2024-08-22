@@ -24,8 +24,8 @@ main{
 }
 
 .container{
-    width: 45rem;
-    max-height: 50rem;
+    width: 43rem;
+    max-height: 49rem;
     height: 100%;
     box-sizing: border-box;
     box-shadow: .1rem .1rem .4rem #939393;
@@ -45,7 +45,7 @@ main{
 }
 
 .area-acao-top>h3{
-    font-size: 3rem;
+    font-size: 2.2rem;
     color: #303030;
 }
 
@@ -78,7 +78,7 @@ main{
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    padding: 1rem 4rem;
+    padding: 1.1rem 4rem;
     overflow: auto;
     height: 100%;
     flex: 1;
@@ -103,7 +103,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2rem;
+    font-size: 1.8rem;
     cursor: pointer;
 }
 
@@ -118,7 +118,7 @@ main{
 }
 
 .btn-acao{
-    width: 15rem;
+    width: 16rem;
     height: 4rem;
     border-radius: 1rem;
     border: none;
@@ -129,7 +129,7 @@ main{
 .btn-adicionar{
     background-color: #3A96FF;
     color: #fff;
-    font-size: 1.6rem;
+    font-size: 1.3rem;
 }
 
 .btn-adicionar:hover{
@@ -139,7 +139,7 @@ main{
 .btn-voltar{
     background-color: #c1c1c1;
     color: #ffffff;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
 }
 
 .btn-voltar:hover{
