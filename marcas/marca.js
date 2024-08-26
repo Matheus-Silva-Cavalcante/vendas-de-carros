@@ -27,8 +27,8 @@ function marcaAtiva(elemento) {
 
     if (marcaSelecionada) {
         elemento.classList.remove('conteudo-ativo');  
-        btnEditar.classList.remove('btn-aditar-ativo');
-        btnExcluir.classList.remove('btn-excluir-excluir');
+        btnEditarMarca.classList.remove('btn-aditar-ativo');
+        btnExcluirMarca.classList.remove('btn-excluir-excluir');
     } else{
         if (marcaAtiva) {
             document.querySelectorAll('.conteudo-ativo').forEach(classAtivo => {
@@ -36,13 +36,13 @@ function marcaAtiva(elemento) {
             });
             
             elemento.classList.add('conteudo-ativo');
-            btnEditar.classList.add('btn-aditar-ativo');
-            btnExcluir.classList.add('btn-excluir-excluir');
+            btnEditarMarca.classList.add('btn-aditar-ativo');
+            btnExcluirMarca.classList.add('btn-excluir-excluir');
         };
     };
 };
 
-btnExcluir.addEventListener('click', () => {
+btnExcluirMarca.addEventListener('click', () => {
     const marcaSelecionada = '.conteudo-ativo';
     
     document.querySelectorAll(marcaSelecionada).forEach(excluiMarca => {
@@ -51,14 +51,14 @@ btnExcluir.addEventListener('click', () => {
         delete marcas[indexMarca];
         excluiMarca.remove();
 
-        btnEditar.classList.remove('btn-aditar-ativo');
-        btnExcluir.classList.remove('btn-excluir-excluir');
+        btnExcluirMarca.classList.remove('btn-aditar-ativo');
+        btnEditarMarca.classList.remove('btn-excluir-excluir');
 
         salvarMarca();
     });
 });
 
-btnEditar.addEventListener('click', () => {
+btnEditarMarca.addEventListener('click', () => {
     const marcaSelecionada = document.querySelector('.conteudo-ativo');
 
     if (marcaSelecionada) {
