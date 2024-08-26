@@ -66,12 +66,28 @@ main{
     cursor: pointer;
 }
 
+.botoes-ativo{
+    border: .1rem solid #727272;
+}
+
+.btn-excluir-excluir{
+    background-color: #f76060;
+}
+
+.btn-aditar-ativo{
+    background-color: #278afa;
+}
+
 .btn-aditar:hover{
     background-color: #6aaaf2;
 }
 
 .btn-excluir:hover{
     background-color: #ff7b7b;
+}
+
+.conteudo-ativo{
+    border: .1rem solid rgb(101, 173, 255);
 }
 
 .area-conteudo{

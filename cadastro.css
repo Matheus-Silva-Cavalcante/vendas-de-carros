@@ -41,7 +41,7 @@ main{
     gap: 1rem;
 }
 
-.area-cadastro>div{
+.area-cadastro>label{
     font-size: 2rem;
     color: #4d4d4d;
 }
@@ -55,6 +55,15 @@ main{
     border: none;
     outline: transparent;
     transition: .5s;
+}
+
+.erro{
+    outline: .1rem solid rgb(255, 32, 32);
+}
+
+.alerta-campo-vasio{
+    font-size: 1.8rem;
+    color: rgb(255, 32, 32);
 }
 
 .input-texto:focus-visible{

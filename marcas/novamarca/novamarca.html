@@ -5,20 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nova Marca</title>
     <link rel="stylesheet" href="/cadastro.css">
+
+    <script src="/marcas/novamarca/novamarca.js" defer></script>
+    <script src="/marcas/novamarca/salvarmarca.js" defer></script>
 </head>
 <body>
     <main>
         <div class="container">
             <div class="area-cadastro">
-                <div>Marca do Carro :</div>
+                <label for="textoMarca">Marca do Carro :</label>
 
-                <input class="input-texto" type="text">
+                <input id="textoMarca" class="input-texto" type="text">
+
+                <div id="inputMarcaVasia" class="alerta-campo-vasio" style="display: none;">
+                    Ops !!
+                </div>
             </div>
 
             <div class="area-botoes">
-                <button class="btn-acao btn-salvar">Salvar</button>
+                <button id="btnSalvarMarca" class="btn-acao btn-salvar">Salvar</button>
 
-                <button class="btn-acao btn-cancelar" onclick="location.href= '/marcas/marcas.html'">Cancelar</button>
+                <button id="btnCancelarMarca" class="btn-acao btn-cancelar">Cancelar</button>
             </div>
         </div>
     </main>
