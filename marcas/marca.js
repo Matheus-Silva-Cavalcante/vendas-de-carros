@@ -48,13 +48,17 @@ btnExcluirMarca.addEventListener('click', () => {
     document.querySelectorAll(marcaSelecionada).forEach(excluiMarca => {
         const indexMarca = excluiMarca.getAttribute('data-index');
 
-        delete marcas[indexMarca];
-        excluiMarca.remove();
+        const desejaExcluir = confirm('Deseja Excluir essa Marca?');
 
-        btnExcluirMarca.classList.remove('btn-aditar-ativo');
-        btnEditarMarca.classList.remove('btn-excluir-excluir');
-
-        salvarMarca();
+        if (desejaExcluir) {            
+            delete marcas[indexMarca];
+            excluiMarca.remove();
+    
+            btnExcluirMarca.classList.remove('btn-aditar-ativo');
+            btnEditarMarca.classList.remove('btn-excluir-excluir');
+    
+            salvarMarca();
+        };
     });
 });
 
