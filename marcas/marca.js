@@ -14,7 +14,7 @@ function mostrarMaca(marca, index) {
 };
 
 
-marcas?.forEach((marca, index) => {
+marcas.forEach((marca, index) => {
     if (!marca) return;
 
     areaConteudo.append(mostrarMaca(marca, index));
