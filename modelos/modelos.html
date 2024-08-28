@@ -3,9 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Modelos</title>
     <link rel="stylesheet" href="/modelos/modelos.css">
     <link rel="stylesheet" href="/icon/style.css">
+
+    <script src="/marcas/novamarca/salvarmarca.js" defer></script>
+    <script src="/marcas/novamarca/novamarca.js" defer></script>
+    <script src="/modelos/novomodelo/salvarmodelo.js" defer></script>
+    <script src="/modelos/modelo.js" defer></script>
 </head>
 <body>
     <main>
@@ -14,89 +19,30 @@
                 <h3>Modelos</h3>
 
                 <div class="botoes">
-                    <button class="icon-editor btn-aditar botoes-editar-excluir"></button>
+                    <button id="btnEditarModelo" class="icon-editor btn-aditar botoes-editar-excluir"></button>
 
-                    <button class="icon-white btn-excluir botoes-editar-excluir"></button>
+                    <button id="btnExcluirModelo" class="icon-white btn-excluir botoes-editar-excluir"></button>
                 </div>
             </div>
 
             <div class="area-conteudo">
-                <div class="conteudo">
-                    <div class="conteudo-texto">Polo</div>
+                <div class="div-conteudo">
+                    <div class="conteudo" onclick="modeloAtivo(this)">
+                        <div class="conteudo-texto">Polo</div>
 
-                    <hr class="hr-conteudo">
-                    <div class="conteudo-texto">Volkswagen</div>
+                        <hr class="hr-conteudo">
+                        <div class="conteudo-texto">Volkswagen</div>
 
-                    <hr class="hr-conteudo">                    
-                    <div class="conteudo-texto">flex - Gasolina e álcoo</div>
+                        <hr class="hr-conteudo">                    
+                        <div class="conteudo-texto">flex - Gasolina e álcoo</div>
 
-                    <hr class="hr-conteudo">                    
-                    <div class="conteudo-texto">Hatchback</div>
+                        <hr class="hr-conteudo">                    
+                        <div class="conteudo-texto">Hatchback</div>
 
-                    <hr class="hr-conteudo">                    
-                    <div  class="conteudo-texto">4 Portas</div>
-                </div>
-
-                <div class="conteudo">
-                    <div class="conteudo-texto">Polo</div>
-
-                    <hr class="hr-conteudo">
-                    <div class="conteudo-texto">Volkswagen</div>
-
-                    <hr class="hr-conteudo">                    
-                    <div class="conteudo-texto">flex - Gasolina e álcoo</div>
-
-                    <hr class="hr-conteudo">                    
-                    <div class="conteudo-texto">Hatchback</div>
-
-                    <hr class="hr-conteudo">                    
-                    <div  class="conteudo-texto">4 Portas</div>
-                </div>
-                <div class="conteudo">
-                    <div class="conteudo-texto">Polo</div>
-
-                    <hr class="hr-conteudo">
-                    <div class="conteudo-texto">Volkswagen</div>
-
-                    <hr class="hr-conteudo">                    
-                    <div class="conteudo-texto">flex - Gasolina e álcoo</div>
-
-                    <hr class="hr-conteudo">                    
-                    <div class="conteudo-texto">Hatchback</div>
-
-                    <hr class="hr-conteudo">                    
-                    <div  class="conteudo-texto">4 Portas</div>
-                </div>
-                <div class="conteudo">
-                    <div class="conteudo-texto">Polo</div>
-
-                    <hr class="hr-conteudo">
-                    <div class="conteudo-texto">Volkswagen</div>
-
-                    <hr class="hr-conteudo">                    
-                    <div class="conteudo-texto">flex - Gasolina e álcoo</div>
-
-                    <hr class="hr-conteudo">                    
-                    <div class="conteudo-texto">Hatchback</div>
-
-                    <hr class="hr-conteudo">                    
-                    <div  class="conteudo-texto">4 Portas</div>
-                </div>
-                <div class="conteudo">
-                    <div class="conteudo-texto">Polo</div>
-
-                    <hr class="hr-conteudo">
-                    <div class="conteudo-texto">Volkswagen</div>
-
-                    <hr class="hr-conteudo">                    
-                    <div class="conteudo-texto">flex - Gasolina e álcoo</div>
-
-                    <hr class="hr-conteudo">                    
-                    <div class="conteudo-texto">Hatchback</div>
-
-                    <hr class="hr-conteudo">                    
-                    <div  class="conteudo-texto">4 Portas</div>
-                </div>                
+                        <hr class="hr-conteudo">                    
+                        <div  class="conteudo-texto">4 Portas</div>
+                    </div>
+                </div>                              
             </div>
 
             <div class="area-acao-low">

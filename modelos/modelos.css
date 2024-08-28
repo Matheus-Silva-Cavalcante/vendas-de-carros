@@ -27,6 +27,7 @@ main{
     max-width: 43rem;
     width: 100%;
     max-height: 68rem;
+    /* max-height: 50.5rem; */
     height: 100%;
     box-sizing: border-box;
     box-shadow: .1rem .1rem .4rem #939393;
@@ -67,12 +68,20 @@ main{
     cursor: pointer;
 }
 
+.btn-excluir-ativo{
+    background-color: #fd6a6a;
+}
+
+.btn-aditar-ativo{
+    background-color: #278afa;
+}
+
 .btn-aditar:hover{
     background-color: #6aaaf2;
 }
 
 .btn-excluir:hover{
-    background-color: #ff7b7b;
+    background-color: #ff8c8c;
 }
 
 .area-conteudo{
@@ -107,6 +116,10 @@ main{
     align-items: center;
     gap: .5rem;
     cursor: pointer;
+}
+
+.conteudo-ativo{
+    border: .1rem solid rgb(101, 173, 255);
 }
 
 .conteudo-texto{

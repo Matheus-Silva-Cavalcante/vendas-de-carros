@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adicionar Modelo</title>
     <link rel="stylesheet" href="/modelos/novomodelo/novomodelo.css">
+
+    <script src="/marcas/novamarca/salvarmarca.js" defer></script>
+    <script src="/motorizacao/novamotorizacao/salvarmotorizacao.js" defer></script>
+    <script src="/carroceria/novacarroceria/salvarcarroceria.js" defer></script>
+    <script src="/modelos/novomodelo/salvarmodelo.js" defer></script>
+    <script src="/modelos/novomodelo/novomodelo.js" defer></script>
 </head>
 <body>    
     <div class="container">
@@ -14,47 +20,55 @@
 
         <div class="area-conteudo">
             <div class="area-cadastro">
-                <label for="modelo">Nome do Modelo :</label>
-                <input class="input-select" id="modelo" type="text" placeholder="Nome do Carro ?">
+                <label for="nomeModelo">Nome do Modelo :</label>
+                <input class="input-select" id="nomeModelo" type="text" placeholder="Nome do Carro ?">
+
+                <div id="inputModeloVasia" class="alerta-campo-vasio" style="display: none;">
+                    Nome do Carro Obrigatoria !!
+                </div>
             </div>
 
             <div class="area-cadastro">
-                <label for="marcas">Marca :</label>
-                <select class="input-select" name="" id="marcas">
-                    <option>Volkswagen</option>
+                <label for="nomeMarcas">Marca :</label>
+                <select class="input-select nome-marca" name="" id="nomeMarcas">
+                    <!-- <option>Volkswagen</option>
                     <option>Audi</option>
-                    <option>Porsche</option>
+                    <option>Porsche</option> -->
                 </select>
             </div>
 
             <div class="area-cadastro">
-                <label for="motorizacao">Tipos de Motorização :</label>
-                <select class="input-select" name="" id="motorizacao">
-                    <option>flex - Gasolina e álcoo</option>
+                <label for="nomeMotorizacao">Tipos de Motorização :</label>
+                <select class="input-select nome-motor" name="" id="nomeMotorizacao">
+                    <!-- <option>flex - Gasolina e álcoo</option>
                     <option>Gasolina</option>
-                    <option>Diesel</option>
+                    <option>Diesel</option> -->
                 </select>
             </div>
 
             <div class="area-cadastro">
-                <label for="carroceria">Tipo de Carroceria :</label>
-                <select class="input-select" name="" id="carroceria">
-                    <option>Sedan</option>
+                <label for="nomeCarroceria">Tipo de Carroceria :</label>
+                <select class="input-select nome-carrocaria" name="" id="nomeCarroceria">
+                    <!-- <option>Sedan</option>
                     <option>SUV</option>
-                    <option>Hatchback</option>
+                    <option>Hatchback</option> -->
                 </select>
             </div>
 
             <div class="area-cadastro">
                 <label for="numeroPorta">Número de Portas</label>
                 <input class="input-select" id="numeroPorta" type="number" placeholder="Quantas Portas ?">
+
+                <div id="inputPotaloVasia" class="alerta-campo-vasio" style="display: none;">
+                    Quantidade de Portas Obrigatoria !!
+                </div>
             </div>
         </div>
 
         <div class="area-botoes">
-            <button class="btn-acao btn-salvar">Salvar</button>
+            <button id="btnSalvarModelo" class="btn-acao btn-salvar">Salvar</button>
 
-            <button class="btn-acao btn-cancelar" onclick="location.href='/modelos/modelos.html'">Cancelar</button>
+            <button id="btnCancelarModelo" class="btn-acao btn-cancelar" onclick="location.href='/modelos/modelos.html'">Cancelar</button>
         </div>
     </div>
 </body>

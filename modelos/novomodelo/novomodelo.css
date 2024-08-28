@@ -59,6 +59,11 @@ body{
     color: #4d4d4d;
 }
 
+.alerta-campo-vasio{
+    color: rgb(255, 32, 32);
+    font-size: 1.5rem;
+}
+
 .input-select{
     border-radius: 1rem;
     box-shadow: .1rem .1rem .4rem #939393;
@@ -68,6 +73,10 @@ body{
     outline: transparent;
     transition: .5s;
     color: #4d4d4d;
+}
+
+.erro{
+    outline: .1rem solid rgb(255, 32, 32);
 }
 
 .input-select:focus-visible{

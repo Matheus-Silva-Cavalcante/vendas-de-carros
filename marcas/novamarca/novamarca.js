@@ -1,3 +1,6 @@
+const btnSalvarMarca = document.querySelector('#btnSalvarMarca');
+const btnCancelarMarca = document.querySelector('#btnCancelarMarca');
+
 function gerarMarca() {
     const marca = {
         marca: textoMarca.value,
@@ -30,7 +33,7 @@ function gerarMarca() {
     location.href= '/marcas/marcas.html';
 };
 
-btnSalvarMarca.addEventListener('click', () => {
+btnSalvarMarca?.addEventListener('click', () => {
     gerarMarca();
 });
 
@@ -44,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 });
 
-btnCancelarMarca.addEventListener('click', () => {
+btnCancelarMarca?.addEventListener('click', () => {
     const indexMarca = localStorage.getItem('editaMarcaIndex');
 
     if (indexMarca) {
