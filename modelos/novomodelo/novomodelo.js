@@ -33,7 +33,15 @@ function gerarModelo() {
 
     if (erro) return;
 
-    modelos.push(modelo);
+    const indexEditarModelo = localStorage.getItem('indexEditarModelo');
+
+    if (indexEditarModelo !== null) {
+        modelos[indexEditarModelo] = modelo;
+        localStorage.removeItem('indexEditarModelo');
+    } else {
+        modelos.push(modelo);
+    };
+
     salvarModelo();
 
     location.href= '/modelos/modelos.html';
@@ -98,4 +106,35 @@ carrocerias.forEach((carroceria, index) => {
     if (!carroceria) return;
 
     nomeCarroceria.append(gerarOptionCarroceria(carroceria, index));
+});
+
+//----- editar modelo -------
+
+document.addEventListener('DOMContentLoaded', () => {
+    const indexModelo = localStorage.getItem('indexEditarModelo');
+
+    if (indexModelo !== null) {
+        const modelo = modelos[indexModelo];
+        console.log(modelo)
+
+        document.querySelector('#nomeModelo').value = modelo.modelo;
+
+        document.querySelector('#nomeMarcas').value = modelo.marca;
+
+        document.querySelector('#nomeMotorizacao').value = modelo.motorizacao;
+
+        document.querySelector('#nomeCarroceria').value = modelo.carroceria;
+
+        document.querySelector('#numeroPorta').value = modelo.portas;
+    };
+});
+
+btnCancelarModelo.addEventListener('click', () => {
+    const indexModelo = localStorage.getItem('indexEditarModelo');
+
+    if (indexModelo) {
+        localStorage.removeItem('indexEditarModelo');
+    };
+
+    location.href= '/modelos/modelos.html'
 });

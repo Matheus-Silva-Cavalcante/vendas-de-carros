@@ -1,7 +1,10 @@
-const areaConteudo = document.querySelector('.area-conteudo')
+const areaConteudo = document.querySelector('.area-conteudo');
 
 function mostrarModelo(modelo, index) {
-    let htmlModelo = `
+    const marcaEditada = marcas[0]
+    console.log(marcaEditada)
+
+    let htmlModelo =`
         <div class="conteudo" onclick="modeloAtivo(this)" data-index="${index}">
             <div class="conteudo-texto">${modelo?.modelo}</div>
 
@@ -28,6 +31,8 @@ function mostrarModelo(modelo, index) {
 };
 
 modelos.forEach((modelo, index) => {
+    if (!modelo) return;
+
     areaConteudo.append(mostrarModelo(modelo, index));
 });
 
@@ -53,3 +58,34 @@ function modeloAtivo(elemento) {
     };
 
 };
+
+btnExcluirModelo.addEventListener('click', () =>{
+    const modeloSelecionado = '.conteudo-ativo';
+
+    document.querySelectorAll(modeloSelecionado).forEach(excluirModelo => {
+        const indexModelo = excluirModelo.getAttribute('data-index');
+        console.log(indexModelo)
+
+        delete modelos[indexModelo];
+        excluirModelo.remove();
+
+        btnEditarModelo.classList.remove('btn-aditar-ativo');
+        btnExcluirModelo.classList.remove('btn-excluir-ativo');
+
+        salvarModelo();
+    });
+});
+
+btnEditarModelo.addEventListener('click', () => {
+    const modeloSelecionado = document.querySelector('.conteudo-ativo');
+    console.log(modeloSelecionado)
+
+    if (modeloSelecionado) {
+        const indexModelo = modeloSelecionado.getAttribute('data-index');
+        console.log(indexModelo)
+
+        localStorage.setItem('indexEditarModelo', indexModelo);
+
+        location.href= "/modelos/novomodelo/novomodelo.html";
+    };
+});
