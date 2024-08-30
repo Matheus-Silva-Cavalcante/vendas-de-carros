@@ -29,15 +29,18 @@ function marcaAtiva(elemento) {
         elemento.classList.remove('conteudo-ativo');  
         btnEditarMarca.classList.remove('btn-aditar-ativo');
         btnExcluirMarca.classList.remove('btn-excluir-excluir');
+        //console.log('3')
     } else{
         if (marcaAtiva) {
             document.querySelectorAll('.conteudo-ativo').forEach(classAtivo => {
                 classAtivo.classList.remove('conteudo-ativo');
+                //console.log('2')
             });
             
             elemento.classList.add('conteudo-ativo');
             btnEditarMarca.classList.add('btn-aditar-ativo');
             btnExcluirMarca.classList.add('btn-excluir-excluir');
+            //console.log('1')
         };
     };
 };

@@ -34,6 +34,12 @@ btnSalvarCarroceria.addEventListener('click', () => {
     gerarCarroceria();
 });
 
+document.addEventListener('keypress', function(eventGerarCarroceria){
+    if (eventGerarCarroceria.key === 'Enter') {
+        gerarCarroceria();
+    };
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     const indexCarrocria = localStorage.getItem('editarCarroceriaIndex');
 

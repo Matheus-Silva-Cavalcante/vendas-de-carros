@@ -1,8 +1,13 @@
 const areaConteudo = document.querySelector('.area-conteudo');
 
 function mostrarModelo(modelo, index) {
-    const marcaEditada = marcas[0]
-    console.log(marcaEditada)
+    const marca = marcas[3]
+    const motor = motores[1]
+    const carroceria = carrocerias[0]
+    
+    console.log(carroceria)
+    console.log(motor)
+    console.log(marca)
 
     let htmlModelo =`
         <div class="conteudo" onclick="modeloAtivo(this)" data-index="${index}">
@@ -18,7 +23,7 @@ function mostrarModelo(modelo, index) {
             <div class="conteudo-texto">${modelo?.carroceria}</div>
 
             <hr class="hr-conteudo">                    
-            <div  class="conteudo-texto">${modelo?.portas} portas</div>
+            <div class="conteudo-texto">${modelo?.portas} portas</div>
         </div>
     `;
 
@@ -39,7 +44,7 @@ modelos.forEach((modelo, index) => {
 function modeloAtivo(elemento) {
     const modeloSelecionad = elemento.classList.contains('conteudo-ativo');
 
-    const modeloAtivo = document.querySelectorAll('.conteudo-ativo')
+    const modeloAtivo = document.querySelectorAll('.conteudo-ativo');
 
     if (modeloSelecionad) {
         elemento.classList.remove('conteudo-ativo');
@@ -63,14 +68,19 @@ btnExcluirModelo.addEventListener('click', () =>{
     const modeloSelecionado = '.conteudo-ativo';
 
     document.querySelectorAll(modeloSelecionado).forEach(excluirModelo => {
+        //debugger
         const indexModelo = excluirModelo.getAttribute('data-index');
         console.log(indexModelo)
 
-        delete modelos[indexModelo];
-        excluirModelo.remove();
+        const desejaExcluir = confirm('Deseja Exclir esse Modelo');
 
-        btnEditarModelo.classList.remove('btn-aditar-ativo');
-        btnExcluirModelo.classList.remove('btn-excluir-ativo');
+        if (desejaExcluir) {
+            delete modelos[indexModelo];
+            excluirModelo.remove();
+
+            btnEditarModelo.classList.remove('btn-aditar-ativo');
+            btnExcluirModelo.classList.remove('btn-excluir-ativo');    
+        };        
 
         salvarModelo();
     });

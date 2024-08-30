@@ -51,6 +51,12 @@ btnSalvarModelo.addEventListener('click', () => {
     gerarModelo();
 });
 
+document.addEventListener('keypress', function(eventGerarModelo) {
+    if (eventGerarModelo.key === 'Enter') {
+        gerarModelo();
+    };
+});
+
 //---marca do carro----->
 
 function gerarOptionMarca(marca, index) {

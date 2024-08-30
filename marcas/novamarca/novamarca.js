@@ -37,6 +37,12 @@ btnSalvarMarca?.addEventListener('click', () => {
     gerarMarca();
 });
 
+document.addEventListener('keypress', function(eventGerarMarca) {
+    if (eventGerarMarca.key === 'Enter') {
+        gerarMarca();
+    };
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     const indexMarca = localStorage.getItem('editaMarcaIndex');
 

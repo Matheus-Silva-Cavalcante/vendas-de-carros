@@ -34,6 +34,12 @@ btnSalvarMotorizacao.addEventListener('click', () => {
     gerarMotorizacao();
 });
 
+document.addEventListener('keypress', function(eventGerarMotorizacao) {
+    if (eventGerarMotorizacao.key === 'Enter') {
+        gerarMotorizacao();
+    };
+});
+
 document.addEventListener('DOMContentLoaded', () => {
     const indexMotorizacao = localStorage.getItem('editarMotorizacaoIndex');
 
